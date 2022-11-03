@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Twlight 101</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+</head>
+
+<body>
+<div id="header">	
+<h1>ARE YOU A TRUE TWILIGHT FAN?</h1>
+</div>
+
+    <form id="myform">
+
+
+
+<div id="question1">
+    <div class="col-md">
+   <h2>What color is Bella's truck?</h2>
+      <input type="radio" name="color" value="20" id="red" /><label for="red">Red</label>
+<input type="radio" name="color" value="0" id="grey" /><label for="grey">Grey</label>
+<input type="radio" name="color" value="0" id="white" /><label for="white">White</label>
+<input type="radio" name="color" value="0" id="brown" /><label for="brown">Brown</label>
+<input type="radio" name="color" value="0" id="yellow" /><label for="yellow">Yellow</label>
+</div> 
+</div>
+
+
+<div id="question2">
+        <div class="col-md">
+      <h2>Who is Bella's first friend at Forks High School?</h2>
+        <input type="radio" name="friend" value="0" id="mike" /><label for="mike">Mike</label>
+<input type="radio" name="friend" value="20" id="jessica" /><label for="jessica">Jessica</label>
+<input type="radio" name="friend" value="0" id="eric" /><label for="eric">Eric</label>
+<input type="radio" name="friend" value="0" id="alice" /><label for="alice">Alice</label>
+<input type="radio" name="friend" value="0" id="jacob" /><label for="jacob">Jacob</label>
+</div>
+</div>
+    
+<div id="question3">
+    <div class="col">
+      <h2>What does Bella order at the restaurant with Edward?</h2>
+        <input type="radio" name="food" value="0" id="spaghetti" /><label for="spaghetti">Spaghetti</label>
+<input type="radio" name="food" value="0" id="sandwich" /><label for="sandwich">A turkey sandwich</label>
+<input type="radio" name="food" value="0" id="salmon" /><label for="salmon">Salmon</label>
+<input type="radio" name="food" value="20" id="ravioli" /><label for="ravioli">Mushroom ravioli</label>
+<input type="radio" name="food" value="0" id="risotto" /><label for="risotto">Risotto</label>
+</div>
+</div>
+    
+
+<div id="question4">
+    <div class="col">
+        <h2>Jacob begins to feel ill while at _______ and has to leave.</h2>
+        <input type="radio" name="loc" value="0" id="school" /><label for="school">Forks High School</label>
+<input type="radio" name="loc" value="0" id="cafe" /><label for="cafe">Forks Cafe</label>
+<input type="radio" name="loc" value="0" id="beach" /><label for="beach">La Push Beach</label>
+<input type="radio" name="loc" value="20" id="movies" /><label for="movies">the movies</label>
+<input type="radio" name="loc" value="0" id="house" /><label for="house">the Swan house</label>
+</div>
+</div>
+    
+
+<div id="question5">
+     <div class="col">
+        <h2>Which band's song played during the baseball scene?</h2>
+        <input type="radio" name="band" value="0" id="mouth" /><label for="mouth">American Mouth</label>
+<input type="radio" name="band" value="0" id="killers" /><label for="killers">The Killers</label>
+<input type="radio" name="band" value="20" id="muse" /><label for="muse">Muse</label>
+<input type="radio" name="band" value="0" id="paramore" /><label for="paramore">Paramore</label>
+<input type="radio" name="band" value="0" id="death" /><label for="death">Death Cab For Cutie</label>
+</div>
+</div>
+    
+
+    
+<div id="enter">
+    <div class="col">
+    <button type="submit">Submit</button>
+    <p>Your grade is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+   
+</div>
+</div>
+
+    
+
+  </div>
+</div>
+</div>
+
+
+</div>
+
+</form>
+
+
+
+<script>
+document.getElementById("myform").onsubmit=function() {
+       color = parseInt(document.querySelector('input[name = "color"]:checked').value);
+       friend = parseInt(document.querySelector('input[name = "friend"]:checked').value);
+       food = parseInt(document.querySelector('input[name = "food"]:checked').value);
+       loc = parseInt(document.querySelector('input[name = "loc"]:checked').value);
+       band = parseInt(document.querySelector('input[name = "band"]:checked').value);
+
+       result = color + friend + food + loc + band;
+
+    document.getElementById("grade").innerHTML = result;
+
+
+    if (result == 0) {result2 = "I don't think we can be friends."};
+if (result == 20) {result2 = "Oh no."};
+if (result == 40) {result2 = "Mhhhhh. Maybe try again."};
+if (result == 60) {result2 = "So close. But not close enough."};
+if (result == 80) {result2 = "C'mon! You got this!"};
+if (result == 100) {result2 = "Yay! You're a real fan."};
+document.getElementById("grade2").innerHTML = result2;
+
+
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+
+</body>
+</html>
